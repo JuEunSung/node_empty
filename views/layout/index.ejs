@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Document</title>
+    <%- include(`${APP_ROOT}/views/layout/css`) %> <%- include(`${APP_ROOT}/views/layout/js`) %>
+  </head>
+  <body>
+    <div id="wrap">
+      <%- include(`${APP_ROOT}/views/layout/header`) %>
+      <div id="bottom">
+        <%- include(`${APP_ROOT}/views/layout/nav`) %>
+        <div id="right">
+          <div id="container">
+            <p class="title">홈</p>
+            <div id="content"></div>
+          </div>
+          <%- include(`${APP_ROOT}/views/layout/footer`) %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

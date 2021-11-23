@@ -1,0 +1,10 @@
+<div id="top">
+  <span class="logo"><a href="/admin">관리자</a></span>
+  <div class="top_right_menu">
+    <% if (LOGIN) { %>
+    <a href="javascript:;" onclick="logout()" class="logout">로그아웃</a>
+    <% } else { %>
+    <a href="/admin" class="logout">로그인</a>
+    <% } %>
+  </div>
+</div>

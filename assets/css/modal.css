@@ -1,0 +1,172 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'NotoSans';
+  src: url('../fonts/NotoSansKR-Light.otf');
+}
+* {
+  font-family: 'NotoSans', sans-serif;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 17px;
+  line-height: 1;
+  box-sizing: border-box;
+  word-break: keep-all;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: none;
+}
+html {
+  width: 800px;
+}
+
+body.body1000 {
+  width: 1000px;
+}
+#modal_wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 30px;
+  box-sizing: border-box;
+}
+#modal_wrap2 {
+  width: 100%;
+  min-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+p.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222222;
+  text-align: center;
+  margin-bottom: 30px;
+}
+p.title2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222222;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 30px;
+}
+p.sub_title {
+  font-size: 17px;
+  color: #444444;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+table,
+tr,
+td,
+th {
+  font-size: 16px;
+  border: 1px solid #222222;
+  border-collapse: collapse;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #444444;
+  vertical-align: middle;
+}
+table {
+  width: 100%;
+}
+table tbody td,
+table tbody th {
+  text-align: center;
+}
+th {
+  background-color: #f9f9f9;
+  color: #222222;
+  font-weight: bold;
+}
+.box {
+  width: 100%;
+  margin: 40px 0;
+  border: 1px solid #cccccc;
+  padding: 20px;
+  font-size: 1vw;
+  line-height: 1.2;
+  word-break: keep-all;
+}
+.end_sub {
+  font-size: 1vw;
+  line-height: 1.2;
+  margin: 10px 0;
+  text-align: center;
+  color: #222222;
+  word-break: keep-all;
+}
+.end_title {
+  font-size: 1.8vw;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+  color: #222222;
+}
+input[type='radio'] {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+input[type='radio']:checked {
+  background: #222;
+  border: 1px solid #222;
+}
+.radio_label {
+  font-size: 15px;
+  margin-right: 10px;
+  color: #ccc;
+  cursor: pointer;
+}
+input[type='radio']:checked + .radio_label {
+  color: #222;
+}
+
+.check_btn_box {
+  width: 100%;
+  height: 100%;
+}
+.check_list_box {
+  display: none;
+  position: absolute;
+  top: 199px;
+  width: 180px;
+  background-color: #ffffff;
+  border: 2px solid #666666;
+  padding: 16px;
+}
+.car_check_content {
+  position: relative;
+  width: 1000px;
+  height: 800px;
+  background: url('/static/images/check_table.png') no-repeat 0 0;
+  background-size: 1000px 800px;
+  margin: 0 auto;
+}
+
+.car_check_content a.check {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+#performanceCheckListArea {
+  padding: 0 30px;
+}
+#performanceCheckListArea div {
+  font-size: 16px;
+  line-height: 2;
+}
+.functionalTypeRadio {
+  text-align: left;
+}
+.functionalTypeRadio span {
+  display: inline-block;
+  width: 19%;
+  padding: 5px 0;
+  box-sizing: border-box;
+}

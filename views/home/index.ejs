@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>홈</title>
+    <%- include(`${APP_ROOT}/views/layout/css`) %> <%- include(`${APP_ROOT}/views/layout/js`) %>
+  </head>
+  <body>
+    <div id="wrap">
+      <%- include(`${APP_ROOT}/views/layout/header`) %>
+      <div id="bottom">
+        <%- include(`${APP_ROOT}/views/layout/nav`) %>
+        <div id="right">
+          <div id="container">
+            <p class="title">대시보드</p>
+            <div id="content">
+              <div class="login_box">
+                <p><%= bar %></p>
+              </div>
+            </div>
+          </div>
+          <%- include(`${APP_ROOT}/views/layout/footer`) %>
+        </div>
+      </div>
+    </div>
+    <script>
+    </script>
+  </body>
+</html>

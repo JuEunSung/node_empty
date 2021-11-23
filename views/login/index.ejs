@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>로그인</title>
+    <%- include(`${APP_ROOT}/views/layout/css`) %> <%- include(`${APP_ROOT}/views/layout/js`) %>
+  </head>
+  <body>
+    <div id="wrap">
+      <%- include(`${APP_ROOT}/views/layout/header`) %>
+      <div id="bottom">
+        <%- include(`${APP_ROOT}/views/layout/nav`) %>
+        <div id="right">
+          <div id="container">
+            <p class="title">로그인</p>
+            <div id="content">
+              <div class="login_box">
+                <p class="content_title">관리자</p>
+                <form action="">
+                  <input type="text" id="adminId" placeholder="아이디를 입력하세요." />
+                  <input type="password" id="adminPw" placeholder="비밀번호를 입력하세요." />
+                  <button type="button" onclick="login()" class="login_button">로그인</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <%- include(`${APP_ROOT}/views/layout/footer`) %>
+        </div>
+      </div>
+    </div>
+    <script>
+      function login() {
+        const adminId = $('#adminId').val();
+        const adminPw = $('#adminPw').val();
+
+        var message = '';
+
+        if (!adminId) {
+          message = '아이디를 입력하세요';
+        } else if (!adminPw) {
+          message = '비밀번호를 입력하세요';
+        }
+
+        if (message) {
+          alert(message);
+          return;
+        }
+
+        $.ajax({
+          url: '/admin/login',
+          type: 'POST',
+          data: { id: adminId, pw: adminPw },
+          success: function (response) {
+            if (response === HTTP_STATUS.OK.message) {
+              location.reload();
+            } else if (response === HTTP_STATUS.FORBIDDEN.message) {
+              alert('아이디 또는 비밀번호가 일치하지 않습니다');
+            } else {
+              alert('오류가 발생했습니다');
+            }
+          },
+          error: function (error) {
+            if (error && error.responseJSON) {
+              console.log(error.responseJSON);
+            }
+          },
+        });
+      }
+    </script>
+  </body>
+</html>

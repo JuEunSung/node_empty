@@ -1,0 +1,40 @@
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="/static/plugin/chartjs/chartjs.js"></script>
+
+<script src="/static/js/script.js"></script>
+<script src="/static/js/response-status.js"></script>
+<script src="/static/js/error-status.js"></script>
+<script src="/static/js/all.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('input[type="text"]').keydown(function (event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+      }
+    });
+  });
+
+  function logout() {
+    $.ajax({
+      url: '/admin/logout',
+      type: 'POST',
+      success: function (response) {
+        location.reload();
+      },
+      error: function (error) {
+        if (error && error.responseJSON) {
+          console.log(error.responseJSON);
+        }
+      },
+    });
+  }
+
+  function numberWithCommas(x) {
+    if (!x) {
+      return '0';
+    }
+
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+</script>

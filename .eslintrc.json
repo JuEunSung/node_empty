@@ -1,0 +1,20 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "class-methods-use-this": "off",
+    "consistent-return": "off",
+    "linebreak-style": "off",
+    "no-param-reassign": "off",
+    "max-len": 0,
+    "camelcase": "off",
+    "no-restricted-syntax": "off",
+    "no-await-in-loop": "off",
+    "no-restricted-globals": "off",
+    "prefer-destructuring": "off",
+    "no-undef": "off",
+    "no-plusplus": "off",
+    "object-curly-newline": "error",
+    "operator-linebreak": "off"
+  }
+}

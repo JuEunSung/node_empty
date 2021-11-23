@@ -1,0 +1,28 @@
+server:
+  environment: 'dev'
+  name: 'TEST'
+  port: 10001
+  service: 'API 및 관리자'
+  logging: true
+  errorLogging: true
+  uploadBasePath: '/opt/application/download/'
+  url: 'https://'
+  staticUrl: 'https://'
+  domain: ''
+client:
+  adminID: 'ad'
+  adminPW: '123qwe'
+database:
+  host: ''
+  port: 13306
+  username: ''
+  password: ''
+  name: ''
+  queryLogging: true
+  waitForConnection: true
+  connectionLimit: 40
+encrypt:
+  JWTKey: ''
+  AESKey: ''
+  SESSIONKey: 'TesTSerVersEssioN_keY'
+  expiresIn: '365d'
